@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { bootstrapApplication } from '@angular/platform-browser';
 
+// 原本的元件
 @Component({
   selector: 'my-app',
   standalone: true,
@@ -12,10 +13,27 @@ import { bootstrapApplication } from '@angular/platform-browser';
     <a target="_blank" href="https://angular.io/start">
       Learn more about Angular 
     </a>
+    <hr/>
+    <div class="time">
+      <p>{{today | date:'hh:mm:ss'}}</p>
+    </div>
+    <div class="date">
+      <p>{{today | date }}</p>
+    </div>
   `,
 })
 export class App {
   name = 'Angular Isaac Project';
+  today: Date;
+
+  constructor() {}
+
+  ngOnInit(): void {
+    this.today = new Date();
+    setInterval(() => {
+      this.today = new Date();
+    }, 1000);
+  }
 }
 
 bootstrapApplication(App);
