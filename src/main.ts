@@ -13,7 +13,10 @@ import {
 @Component({
   selector: 'my-app',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    CommonModule, 
+    FormsModule, 
+    ReactiveFormsModule],
   template: `
     <p>Hello from {{name}}!</p>
     <a target="_blank" href="https://angular.io/start">
