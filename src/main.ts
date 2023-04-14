@@ -13,13 +13,23 @@ import { bootstrapApplication } from '@angular/platform-browser';
     <a target="_blank" href="https://angular.io/start">
       Learn more about Angular 
     </a>
+
     <hr/>
+
     <div class="time">
       <p>{{today | date:'hh:mm:ss'}}</p>
     </div>
     <div class="date">
       <p>{{today | date }}</p>
     </div>
+
+    <hr/>
+
+    <p>{{name | uppercase}}</p>
+    <p>{{name | lowercase}}</p>
+
+    <hr/>
+
   `,
 })
 export class App {
